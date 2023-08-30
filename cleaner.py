@@ -19,7 +19,8 @@ def cleanfile(filenames, filter):
             df.drop("RK", axis=1, inplace= True)
         if "-9999" in df.columns:
             df.drop("-9999", axis=1, inplace= True)
-
+        if "VBD" in df.columns:
+            df.drop("VBD", axis=1, inplace=True)
         df.to_csv(filename)
 
 
